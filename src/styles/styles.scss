@@ -1,3 +1,5 @@
-body {
-  background-color: burlywood; 
-}
+// base
+@import './base/base';
+
+// page
+@import './pages/home/home'

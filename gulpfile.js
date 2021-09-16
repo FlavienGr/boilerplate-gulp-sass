@@ -1,5 +1,5 @@
 const { src, dest, watch, series } = require("gulp");
-const sass = require("gulp-sass")(require("node-sass"));
+const sass = require("gulp-dart-sass");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
@@ -9,10 +9,10 @@ const browsersync = require("browser-sync").create();
  * sass task
  */
 const scssTask = () => {
-  return src("src/styles/styles.scss", { sourcemaps: true })
-    .pipe(sass())
+  return src("src/styles/**/*.scss", { sourcemaps: true })
+    .pipe(sass().on("error", sass.logError))
     .pipe(postcss([cssnano()]))
-    .pipe(dest("dist", { sourcemaps: "." }));
+    .pipe(dest("dist/styles", { sourcemaps: "." }));
 };
 
 /**
