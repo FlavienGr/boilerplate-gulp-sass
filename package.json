@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint $PWD/src/'**/*.js'",
     "lint:fix": "prettier-eslint $PWD/src/'**/*.js' --write",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
