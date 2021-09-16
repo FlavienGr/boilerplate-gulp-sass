@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint $PWD/src/'**/*.js'",
     "lint:fix": "prettier-eslint $PWD/src/'**/*.js' --write",
-    "dev": "gulp",
+    "dev": "gulp dev",
     "build": "gulp build"
   },
   "keywords": [],
@@ -15,21 +15,27 @@
   "dependencies": {
     "gulp-cli": "^2.3.0"
   },
+  "browserslist": ["last 2 version",
+  "IE 10"],
   "devDependencies": {
+    "autoprefixer": "^10.3.4",
     "browser-sync": "^2.27.5",
     "cssnano": "^5.0.8",
+    "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-terser": "^2.0.1",
     "postcss": "^8.3.6",
     "prettier": "^2.4.0",
     "prettier-eslint": "^13.0.0",
-    "prettier-eslint-cli": "^5.0.1",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-prettier": "^4.0.0"
+    "prettier-eslint-cli": "^5.0.1"
   }
 }

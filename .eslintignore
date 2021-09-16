@@ -3,3 +3,4 @@ test/
 !.eslintrc.js
 webpack.*
 dist
+gulpfile.js
